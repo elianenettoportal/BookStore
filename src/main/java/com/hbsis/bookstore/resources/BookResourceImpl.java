@@ -1,7 +1,6 @@
-package com.hbsis.bookstore.resources.impl;
+package com.hbsis.bookstore.resources;
 
 import java.util.List;
-
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +21,6 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
-
 
 @Api(value = "/api/v1/books", tags = { "book" })
 @RestController
@@ -75,9 +73,9 @@ public class BookResourceImpl implements BookResource {
 		Book created = service.insert(book);
 
 		if (null == created)
-			return new ResponseEntity<>(HttpStatus.NOT_MODIFIED);
+			return new ResponseEntity<Book>(HttpStatus.NOT_MODIFIED);
 		
-		return new ResponseEntity<Book>(created, HttpStatus.CREATED);
+		return new ResponseEntity<Book>(book, HttpStatus.OK);
 
 	}
 	@ApiOperation(value = "Update a Book resource", tags = { "book" }, code = 200)
@@ -92,9 +90,9 @@ public class BookResourceImpl implements BookResource {
 		Book persisted = service.update(book);
 
 		if (null == persisted)
-			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+			return new ResponseEntity<Book>(HttpStatus.NOT_FOUND);
 
-		return new ResponseEntity<Book>(persisted, HttpStatus.OK);
+		return new ResponseEntity<Book>(book, HttpStatus.OK);
 	}
 	
 
@@ -109,9 +107,9 @@ public class BookResourceImpl implements BookResource {
 		Book persisted = service.delete(id);
 
 		if (null == persisted)
-			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+			return new ResponseEntity<Book>(HttpStatus.NOT_FOUND);
 
-		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+		return new ResponseEntity<Book>( HttpStatus.OK);
 	}
 
 }

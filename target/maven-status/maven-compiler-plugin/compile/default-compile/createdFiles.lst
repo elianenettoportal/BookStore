@@ -1,0 +1,15 @@
+com\hbsis\bookstore\service\BookService.class
+com\hbsis\bookstore\repository\BookRepository.class
+com\hbsis\bookstore\BookStoreApplication.class
+com\hbsis\bookstore\model\entities\Genre.class
+com\hbsis\bookstore\model\entities\Publisher.class
+com\hbsis\bookstore\resources\BookResourceImpl.class
+com\hbsis\bookstore\resources\BookResource.class
+com\hbsis\bookstore\model\entities\Book.class
+com\hbsis\bookstore\model\entities\Author.class
+com\hbsis\bookstore\security\GlobalConfiguration.class
+com\hbsis\bookstore\security\WebSecurityConfig.class
+com\hbsis\bookstore\controller\impl\HomeIndexControllerImpl.class
+com\hbsis\bookstore\util\CustomErrorType.class
+com\hbsis\bookstore\service\BookServiceImpl.class
+com\hbsis\bookstore\security\GlobalConfiguration$1.class

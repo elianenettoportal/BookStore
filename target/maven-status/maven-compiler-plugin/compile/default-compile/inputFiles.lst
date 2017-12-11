@@ -1,0 +1,14 @@
+C:\Workspace\bookstore_app\src\main\java\com\hbsis\bookstore\controller\impl\HomeIndexControllerImpl.java
+C:\Workspace\bookstore_app\src\main\java\com\hbsis\bookstore\repository\BookRepository.java
+C:\Workspace\bookstore_app\src\main\java\com\hbsis\bookstore\model\entities\Genre.java
+C:\Workspace\bookstore_app\src\main\java\com\hbsis\bookstore\model\entities\Author.java
+C:\Workspace\bookstore_app\src\main\java\com\hbsis\bookstore\service\BookService.java
+C:\Workspace\bookstore_app\src\main\java\com\hbsis\bookstore\security\WebSecurityConfig.java
+C:\Workspace\bookstore_app\src\main\java\com\hbsis\bookstore\resources\BookResourceImpl.java
+C:\Workspace\bookstore_app\src\main\java\com\hbsis\bookstore\service\BookServiceImpl.java
+C:\Workspace\bookstore_app\src\main\java\com\hbsis\bookstore\BookStoreApplication.java
+C:\Workspace\bookstore_app\src\main\java\com\hbsis\bookstore\model\entities\Book.java
+C:\Workspace\bookstore_app\src\main\java\com\hbsis\bookstore\resources\BookResource.java
+C:\Workspace\bookstore_app\src\main\java\com\hbsis\bookstore\util\CustomErrorType.java
+C:\Workspace\bookstore_app\src\main\java\com\hbsis\bookstore\security\GlobalConfiguration.java
+C:\Workspace\bookstore_app\src\main\java\com\hbsis\bookstore\model\entities\Publisher.java

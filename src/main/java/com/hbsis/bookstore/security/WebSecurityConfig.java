@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
+
      @Override
      protected void configure(HttpSecurity http) throws Exception {
          // disable caching
@@ -19,11 +20,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
          http.csrf().disable() // disable csrf for our requests.
          	 .cors().and()
              .authorizeRequests()
-             .antMatchers("/").permitAll()
+             .antMatchers("/", "/index").permitAll()
+            // .antMatchers("/").permitAll()
              
              //shows
-             .antMatchers( "/api/v1/books/**" ).hasAnyAuthority("SHOWS_LIST,SHOWS_CREATE,SHOWS_EDIT,SHOWS_DELETE")
-              
+             .antMatchers( "/api/v1/books/**" ).hasAnyAuthority("USERS_LIST,USERS_CREATE,USERS_EDIT,USERS_DELETE")
+             
+                          
              //login 
              .antMatchers(HttpMethod.POST, "/api/v1/login").permitAll()
              //landinpage

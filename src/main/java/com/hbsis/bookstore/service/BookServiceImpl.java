@@ -1,6 +1,7 @@
-package com.hbsis.bookstore.service.Impl;
+package com.hbsis.bookstore.service;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,22 +15,18 @@ public class BookServiceImpl implements BookService {
 	@Autowired
 	private BookRepository repository;
 	
-	@Override
 	public List<Book> list() {
 		return repository.findAll();
 	}
 
-	@Override
 	public Book get(Long id) {
 		return repository.findOne( id );
 	}
 
-	@Override
 	public Book insert(Book book) {
 		return repository.save( book );
 	}
 
-	@Override
 	public Book update(Book book) {
 		Book persisted = repository.findOne(book.getIdbook());
 
@@ -48,7 +45,6 @@ public class BookServiceImpl implements BookService {
 		return repository.save(persisted);
 	}
 
-	@Override
 	public Book delete(Long id) {
 		Book persisted = repository.findOne( id );
 
