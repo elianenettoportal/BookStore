@@ -10,8 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-
-     @Override
+	@Override
      protected void configure(HttpSecurity http) throws Exception {
          // disable caching
     	 http.headers().cacheControl();
@@ -24,8 +23,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             // .antMatchers("/").permitAll()
              
              //shows
-             .antMatchers( "/api/v1/books/**" ).hasAnyAuthority("USERS_LIST,USERS_CREATE,USERS_EDIT,USERS_DELETE")
-             
+             .antMatchers( "/api/v1/books/**" ).hasAnyAuthority("USERS_LIST,USERS_CREATE,USERS_EDIT,USERS_DELETE")           
                           
              //login 
              .antMatchers(HttpMethod.POST, "/api/v1/login").permitAll()

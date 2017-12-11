@@ -1,0 +1,74 @@
+.artist-profile{
+
+	.artist-info{
+		display: flex;
+	    flex-direction: column;
+	    border: 1px solid #707070;
+	    margin-bottom: 100px;
+
+	    span.form-title{
+	    	background-color: #ebebeb;
+	    	padding: 15px;
+	    	color: #333333;
+	    	font-weight: bold;
+	    }
+
+		.artist-form{
+			text-align: center;
+		    padding: 10px;
+
+			.form-group{
+				margin-bottom: 15px;
+			    text-align: end;
+			    width: 60%;
+
+				label{
+					color: #484747;
+					margin-right: 15px;
+				}
+
+				input{
+					width: 70%;
+				}
+			}
+
+			.action-buttons{
+				display: flex;
+			    justify-content: space-between;
+			    width: 60%;
+			    padding-left: 200px;
+			
+			    .btn{
+			    	width: 168px;
+			    }
+
+			    .btn-save{
+					background-color: #7401e6;
+					color: #fff;
+				}
+
+				.btn-cancel{
+					background-color: #929496;
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	@media (min-width: 768px){ 
+		.cover-photo{
+			background-color: #959595;
+	    	height: 275px;
+		}
+
+		.profile-photo{
+			margin-left: 20%;
+		    top: 130px;
+		    position: relative;
+		}
+		
+		.artist-profile-body{
+			margin-top: 90px;
+		}
+	}
+}
